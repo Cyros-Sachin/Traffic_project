@@ -3,6 +3,7 @@ import axios from "axios";
 import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from "react-leaflet";
 import polyline from "@mapbox/polyline";
+import './App.css';
 
 // Component to dynamically update the map's center
 const MapView = ({ center }) => {
@@ -33,9 +34,9 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div class="main">
       <h1>Traffic Route Planner</h1>
-      <div>
+      <div class="box">
         <input
           type="text"
           placeholder="Start Location"
@@ -52,7 +53,7 @@ const App = () => {
       </div>
 
       {route && (
-        <div>
+        <div class="details">
           <h2>Route Details</h2>
           <p><strong>Start:</strong> {route.start}</p>
           <p><strong>End:</strong> {route.end}</p>
@@ -62,7 +63,7 @@ const App = () => {
       )}
 
       {traffic && (
-        <div>
+        <div class="prediction">
           <h2>Traffic Prediction</h2>
           <p><strong>Predicted Traffic Level:</strong> {traffic}</p>
           {traffic === "High" && <p style={{ color: "red" }}>Expect delays due to heavy traffic.</p>}
@@ -71,7 +72,7 @@ const App = () => {
         </div>
       )}
 
-      <MapContainer center={[49.41461, 8.681495]} zoom={13} style={{ height: "500px", width: "100%" }}>
+      <MapContainer center={[49.41461, 8.681495]} zoom={13} style={{ height: "500px", width: "90%" }}>
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         {route && (
           <>
