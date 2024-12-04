@@ -31,7 +31,17 @@ strong {
 }
 
 /* Input Section */
-input {
+.input1 {
+  width: 40%;
+  padding: 10px;
+  margin: 10px 10px 20px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-right: 110px;
+
+}
+.input2 {
   width: 40%;
   padding: 10px;
   margin: 10px 10px 20px 10px;
@@ -42,17 +52,20 @@ input {
 
 button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #0ef;
   border: none;
-  border-radius: 4px;
-  color: white;
+  border-radius: 4rem;
+  color: rgb(2, 2, 2);
   font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: .5s ease;
+  box-shadow: 0 0 1rem #0ef;
+  margin-left: 43%;
 }
 
 button:hover {
-  background-color: #0056b3;
+  box-shadow: none;
 }
 
 /* Map Container */
@@ -73,11 +86,12 @@ button:hover {
 
 .box , .details , .prediction{
   background: #323946;
-  padding: 50px;
+  padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100vh;
-  margin-top: 10%;
+  margin-left: 18%;
+  margin-top: 5%;
 }
 
 h2 + p {
@@ -99,3 +113,4 @@ p[style*="green"] {
   font-weight: bold;
   color: #5cb85c;
 }
+

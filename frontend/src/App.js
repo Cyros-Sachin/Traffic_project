@@ -37,13 +37,13 @@ const App = () => {
     <div class="main">
       <h1>Traffic Route Planner</h1>
       <div class="box">
-        <input
+        <input class="input1"
           type="text"
           placeholder="Start Location"
           value={start}
           onChange={(e) => setStart(e.target.value)}
         />
-        <input
+        <input class="input2"
           type="text"
           placeholder="End Location"
           value={end}
